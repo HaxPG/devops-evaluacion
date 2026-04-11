@@ -1,0 +1,35 @@
+name: CI Pipeline MarketVue Backend
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias del Backend
+        run: |
+          cd backend-express
+          npm install
+
+      - name: Validar código (ESLint)
+        run: |
+          cd backend-express
+          npx eslint .
+
+      - name: Ejecutar pruebas
+        run: |
+          cd backend-express
+          npm test
+
+      - name: Simulación de despliegue
+        run: echo "Deploy exitoso"
