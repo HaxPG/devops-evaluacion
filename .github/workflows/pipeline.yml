@@ -24,7 +24,7 @@ jobs:
       - name: Validar código (ESLint)
         run: |
           cd backend-express
-          echo "export default [];" > eslint.config.mjs
+          echo "export default [];" > eslint.config.js
           npx eslint .
 
       - name: Ejecutar pruebas
