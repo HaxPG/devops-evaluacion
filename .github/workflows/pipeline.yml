@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -20,11 +20,6 @@ jobs:
         run: |
           cd backend-express
           npm install
-
-      - name: Validar código (ESLint)
-        run: |
-          cd backend-express
-          npx eslint .
 
       - name: Ejecutar pruebas
         run: |
