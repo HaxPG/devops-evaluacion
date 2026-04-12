@@ -21,6 +21,11 @@ jobs:
           cd backend-express
           npm install
 
+      - name: Validar código (ESLint)
+        run: |
+          cd backend-express
+          npx eslint .
+
       - name: Ejecutar pruebas
         run: |
           cd backend-express
