@@ -6,7 +6,7 @@
     "dev": "node server.js",
     "migrate": "node tools/run-migrations.js",
     "seed": "node tools/seed.js",
-    "prepare": "husky"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
     "axios": "^1.13.2",
@@ -20,8 +20,9 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "jest": "^30.3.0",
-    "prettier": "^3.8.2"
+    "eslint": "^9.0.0",
+    "husky": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0"
   }
 }
