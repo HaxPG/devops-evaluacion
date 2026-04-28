@@ -2,6 +2,7 @@
   "name": "agrogestor-api",
   "type": "module",
   "main": "server.js",
+  "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
     "migrate": "node tools/run-migrations.js",
